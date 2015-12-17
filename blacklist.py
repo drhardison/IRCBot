@@ -43,7 +43,7 @@ WLFile.close()
 def UpdateBlacklist(sender, command):
 	print "Updating blacklist with " + sender + "..."
 	toadd = (sender, command)
-	print  PWhitelist
+
 	if (PBlacklist.count(sender) <= 0 and PWhitelist.count(sender) <= 0):
 		SenderList.append(toadd)
 		print "Added to SenderList"

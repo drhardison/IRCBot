@@ -213,7 +213,8 @@ def HandlePrivateMessage(data):
                                 input.remove(command)
                                 answer = ProcessUserCommand(command, input, sender, nick)
                         else:
-                                answer = "Arf???"
+                                answer = []
+				answer.append("Arf???")
                         if answer != None:
                                 for x in answer:
                                         say(target, x)
@@ -263,7 +264,7 @@ def main():
 			s.send('PONG ' + data.split()[1]+'\r\n') 
 		
 		elif data.find("PRIVMSG") != -1:
-			t = Thread(target=HandlePrivateMessage, args = (data))
+			t = Thread(target=HandlePrivateMessage, args=(data,))
 			t.daemon = True
 			t.start()
 			
