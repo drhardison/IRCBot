@@ -2,9 +2,11 @@
 #from main import DoorServer
 import socket
 from main import NickDict
+from main import AFKList
 from blacklist import *
 from subprocess import *
 
+AFKList = []
 
 def Online(user):
 	global NickDict
@@ -121,9 +123,11 @@ def Office(parameters, sender):
 		retval.append("Invalid Syntax. Format is #office -flag parameters")		
 		
 	return retval
+	
+def SetAFK(parameter, sender):
+	AFKList.append(sender)
 
-
-CommandList = ["help", "online", "status", "door", "office"]
+CommandList = ["help", "online", "status", "door", "office", "afk"]
 
 CommandDict = {
 	"help":Help,
@@ -131,6 +135,7 @@ CommandDict = {
 	"status":Status,
 	"door":Door,
 	"office":Office,
+	"afk":SetAFK,
 	}
 
 

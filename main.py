@@ -64,6 +64,8 @@ def RollCall(message, sender):
 	query = message.split(' ')
 	if len(query) == 3:
 		return ("May I Invite You To Kiss My Shiny Metal Ass?")
+		
+
 #============ Function Definitions ============#	
 
 
@@ -109,6 +111,8 @@ NickDict = {}
 
 MailList = []
 
+AFKList = []
+
 NickDict = LoadNickDictionary(NickDict)
 	
 MailList = LoadMailList(MailList)
@@ -122,9 +126,6 @@ NDFile.close()
 from commands import *
 
 def ProcessAdminCommand(command, message):
-	input = message.split(' ')
-	command = input[0]
-	print "Hello"
 	global NickDict
 	
 	if command == "blacklist":
@@ -187,7 +188,7 @@ def main():
 			s.send('PONG ' + data.split()[1]+'\r\n') 
 		
 		elif data.find("PRIVMSG") != -1:
-			pm = False
+			
 			data1 = data.split(':')
 			header = data1[1].split('!')
 			nick = header[0]
@@ -196,6 +197,8 @@ def main():
 			header2 = header1[1].split("PRIVMSG ")
 			target = str(header2[1]).strip(' ')
 
+			while AFKList.count(sender) > 0:
+				AFKList.remove(sender)
 			
 			if data1.__len__() >= 4:
 				whoto = data1[2].lower()
@@ -203,7 +206,7 @@ def main():
 				
 			else:
 				whoto = None
-				message = data1[2].strip()
+				message = data1[2].strip(' \r\n\t')
 					
 			lmessage = message.lower()
 
@@ -212,6 +215,8 @@ def main():
 				if message.find(Prefix) == -1:
 					whoto = Nick.lower()
 				pm = True
+			else:
+				pm = False
 			
 			if not Blacklisted(sender):
 				if MailList.count(whoto) > 0:
@@ -222,13 +227,18 @@ def main():
 						Email(sender, whoto, message)
 						log("Message Sent to " + whoto)
 				elif whoto == Nick.lower():
+					input = lmessage.split(' ')
+					command = input[0]
 					if PWhitelist.count(sender) > 0:
-						command = message.strip(' \r\n\t')
-						answer = ProcessAdminCommand(command, lmessage)
-						if answer != None:
-							say(target, answer)
+						answer = ProcessAdminCommand(command, input)
+					elif CommandList.count(command) > 0:
+						input.remove(command)
+						answer = ProcessUserCommand(command, input, sender, nick)
 					else:
-						say(target, "Arf???")
+						answer = "Arf???"
+					if answer != None:
+							say(target, answer)
+
 				elif whoto == None and lmessage.find("bot roll call") !=-1:
 					if not pm:
 						UpdateBlacklist(sender, "RollCall")
