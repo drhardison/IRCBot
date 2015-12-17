@@ -20,16 +20,12 @@ def Online(user):
 		return False
 			
 def IsOnline(parameters, sender):
-	print "Params(Command.py): "
-	print  parameters
 	retval = []
 	if len(parameters) > 0:
 		for x in parameters:
 			if x == "k9":
 				retval.append(sender + ": I'm right here. No need to shout!\n")
 			elif Online(x.lower()):
-				print AFKList
-				print AFKList.count(x)
 				if AFKList.count(x) > 0:
 					retval.append(x + " has an SSH Tunnel Open, but is AFK\n")
 				else:
@@ -55,7 +51,6 @@ def Door(parameters, sender):
 	if doorState.find("open") != -1:
 		parameters = []
 		response = Office(parameters, sender)
-		print response
 		temp = response[0].split(" - ")
 		list1 = temp[0]
 		retval.append(list1 + "; " + doorState)
@@ -132,9 +127,9 @@ def Office(parameters, sender):
 	return retval
 	
 def SetAFK(parameter, sender):
-	print "Setting " + sender + " as AFK"
+	retval = []
 	AFKList.append(sender)
-	print AFKList
+        retval.append("Setting " + sender + " as AFK")
 
 CommandList = ["help", "online", "status", "door", "office", "afk"]
 
