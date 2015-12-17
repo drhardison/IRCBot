@@ -8,7 +8,7 @@ from string import *
 from smtplib import *
 from datetime import *
 from subprocess import *
-from threading import thread
+from threading import Thread
 
 
 
