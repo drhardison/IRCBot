@@ -1,0 +1,9 @@
+BUFFERSIZE = 1024
+HOST = dot
+PORT = 6667
+SERVER = yakko.cs.wmich.edu
+NICK = K91
+IDENT = K91
+REALNAME = K91
+CHANNELS = #theTARDIS, #test, #asdf
+LEADER/PREFIX = #
