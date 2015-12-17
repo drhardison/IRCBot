@@ -20,14 +20,20 @@ def Online(user):
 		return False
 			
 def IsOnline(parameters, sender):
-	print parameters
+	print "Params(Command.py): "
+	print  parameters
 	retval = []
 	if len(parameters) > 0:
 		for x in parameters:
 			if x == "k9":
 				retval.append(sender + ": I'm right here. No need to shout!\n")
-			elif Online(x):
-				retval.append(x + " has an SSH Tunnel Open, and is probably on the server somewhere.\n")
+			elif Online(x.lower()):
+				print AFKList
+				print AFKList.count(x)
+				if AFKList.count(x) > 0:
+					retval.append(x + " has an SSH Tunnel Open, but is AFK\n")
+				else:
+					retval.append(x + " has an SSH Tunnel Open, and is probably on the server somewhere.\n")
 			else:
 				retval.append(x + " does not appear to be connected to Yakko at the moment.\n")
 	else:
@@ -67,6 +73,7 @@ def Help(parameter, sender):
 		retval.append("Available Commands: " + ', '.join(CommandList))
 	else:
 		switcher = {
+			"afk": ": Set's a Users AFK (Away From Keyboard) Status",
 			"help": ": Type #help <command> for help.",
 			"online": ": Checks to see if <users> have SSH tunnels open (doesn't work on nicks).\nType #online <user1> <user2>... to see if he/she is online.",
 			"status": ": Type #status <user1> <user2>... to see if he/she is blacklisted.",
@@ -125,7 +132,9 @@ def Office(parameters, sender):
 	return retval
 	
 def SetAFK(parameter, sender):
+	print "Setting " + sender + " as AFK"
 	AFKList.append(sender)
+	print AFKList
 
 CommandList = ["help", "online", "status", "door", "office", "afk"]
 

@@ -16,7 +16,6 @@ from subprocess import *
 Config = open("config.txt", 'r+')
 NDFile = open("NickDictionary.txt", 'r+') #Username is different than Nick
 MailTo = open("MailTo.txt", 'r+')
-Log = open("log.txt", 'w')
 
 def GetConfig():
 	global Config
@@ -37,8 +36,10 @@ def Stamp():
 	return retval
 
 def log(string):
+	Log  = open("log.txt", "a")
 	info = Stamp() + string + "\r\n"
 	Log.write(info)
+	Log.close()
 
 def LoadNickDictionary(dictionary):
 	for line in NDFile:
@@ -208,7 +209,7 @@ def main():
 				whoto = None
 				message = data1[2].strip(' \r\n\t')
 					
-			lmessage = message.lower()
+			lmessage = message.lower().strip(' \r\n\t')
 
 			if target == Nick:
 				target = nick
@@ -227,7 +228,7 @@ def main():
 						Email(sender, whoto, message)
 						log("Message Sent to " + whoto)
 				elif whoto == Nick.lower():
-					input = lmessage.split(' ')
+					input = message.split(' ')
 					command = input[0]
 					if PWhitelist.count(sender) > 0:
 						answer = ProcessAdminCommand(command, input)
@@ -237,7 +238,8 @@ def main():
 					else:
 						answer = "Arf???"
 					if answer != None:
-							say(target, answer)
+						for x in answer:
+							say(target, x)
 
 				elif whoto == None and lmessage.find("bot roll call") !=-1:
 					if not pm:
@@ -249,7 +251,7 @@ def main():
 				
 				elif whoto == None and lmessage.find(Prefix) !=-1:
 					if lmessage[:1] == Prefix:
-						parameters = lmessage.split(' ')
+						parameters = message.split(' ')
 						command = parameters[0].strip('#')
 						parameters.remove(parameters[0])
 						if not pm:

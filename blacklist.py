@@ -17,13 +17,13 @@ SenderList = []
 
 def LoadBlacklist(list):
 	for line in BLFile:
-		line = line.strip("\n").lower()
+		line = line.strip("\r\n").lower()
 		list.append(line)
 	return list
 
 def LoadWhitelist(list):
 	for line in WLFile:
-		line = line.strip("\n").lower()
+		line = line.strip("\r\n").lower()
 		list.append(line)
 	return list
 
@@ -43,7 +43,7 @@ WLFile.close()
 def UpdateBlacklist(sender, command):
 	print "Updating blacklist with " + sender + "..."
 	toadd = (sender, command)
-	print PWhitelist
+	print  PWhitelist
 	if (PBlacklist.count(sender) <= 0 and PWhitelist.count(sender) <= 0):
 		SenderList.append(toadd)
 		print "Added to SenderList"
