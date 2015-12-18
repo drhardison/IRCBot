@@ -153,7 +153,7 @@ def ProcessAdminCommand(command, message):
 		NickDict[input[1]] = input[2]
 
 	else:
-		retval = "Arf???"
+		retval = ["Arf???",]
 
 	return retval
 	
@@ -198,8 +198,7 @@ def main():
                         header2 = header1[1].split("PRIVMSG ")
                         target = str(header2[1]).strip(' ')
 
-                        while AFKList.count(sender) > 0:
-                                AFKList.remove(sender)
+                        UpdateAFKList(nick)
                         
                         if data1.__len__() >= 4:
                                 whoto = data1[2].lower()
@@ -236,7 +235,8 @@ def main():
                                                 input.remove(command)
                                                 answer = ProcessUserCommand(command, input, sender, nick)
                                         else:
-                                                answer = ["Arf???",]
+                                                answer = []
+						answer.append("Arf???")
                                         if answer != None:
                                                 for x in answer:
                                                         say(target, x)

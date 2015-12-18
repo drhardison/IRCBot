@@ -131,7 +131,15 @@ def SetAFK(parameter, sender):
 	AFKList.append(sender)
         retval.append("Setting " + sender + " as AFK")
 
-CommandList = ["help", "online", "status", "door", "office", "afk"]
+def UpdateAFKList(name):
+	while AFKList.count(name) != 0:
+		AFKList.remove(name)
+
+def Vote(parameters, sender):
+	
+
+
+CommandList = ["help", "online", "status", "door", "office", "afk","vote"]
 
 CommandDict = {
 	"help":Help,
@@ -140,6 +148,7 @@ CommandDict = {
 	"door":Door,
 	"office":Office,
 	"afk":SetAFK,
+	"vote":Vote,
 	}
 
 

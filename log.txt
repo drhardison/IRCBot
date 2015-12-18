@@ -361,3 +361,545 @@
 
 12/17/2015 18:36:57	:Hardison!hardison@yakko.cs.wmich.edu PRIVMSG K91 :help
 
+12/17/2015 18:40:44	Connecting to the IRC Server...
+12/17/2015 18:40:44	Connected to IRC Server. Signing In...
+12/17/2015 18:40:44	Signed In. Joining Channels...
+12/17/2015 18:40:44	The Bot is Up and Running
+12/17/2015 18:40:44	Connecting to the IRC Server...
+12/17/2015 18:40:44	Connected to IRC Server. Signing In...
+12/17/2015 18:40:44	Signed In. Joining Channels...
+12/17/2015 18:40:44	The Bot is Up and Running
+12/17/2015 18:40:44	:yakko.cs.wmich.edu NOTICE AUTH :*** Looking up your hostname...
+:yakko.cs.wmich.edu NOTICE AUTH :*** Checking Ident
+:yakko.cs.wmich.edu NOTICE AUTH :*** No Ident response
+:yakko.cs.wmich.edu NOTICE AUTH :*** Found your hostname
+:yakko.cs.wmich.edu NOTICE K91 :*** Spoofing your IP. Congrats.
+:yakko.cs.wmich.edu 001 K91 :Welcome to the debian Internet Relay Chat Network K91
+:yakko.cs.wmich.edu 002 K91 :Your host is yakko.cs.wmich.edu[127.0.0.1/6667], running version hybrid-1:8.1.13.dfsg.1-1
+:yakko.cs.wmich.edu 003 K91 :This server was created Jan  9 2014 at 05:35:43
+:yakko.cs.wmich.edu 004 K91 yakko.cs.wmich.edu hybrid-1:8.1.13.dfsg.1-1 DFGHRSWabcdefgijklnorsuwxyz bciklmnoprstveIMORS bkloveIh
+:yakko.cs.wmich.edu 005 K91 CALLERID CASEMAPPING=rfc1459 DEAF=D KICKLEN=180 MODES=4 PREFIX=(ohv)@%+ STATUSMSG=@%+ EXCEPTS=e INVEX=I NICKLEN=15 NETWORK=debian MAXLIST=beI:160 MAXTARGETS=1 :are supported by this server
+:yakko.cs.wmich.edu 005 K91 CHANTYPES=# CHANLIMIT=#:100 CHANNELLEN=50 TOPICLEN=300 CHANMODES=beI
+12/17/2015 18:40:44	,k,l,imnprstORS ELIST=CMNTU SAFELIST KNOCK WATCH=60 AWAYLEN=180 :are supported by this server
+:yakko.cs.wmich.edu 042 K91 0HYAAAA18 :your unique ID
+:yakko.cs.wmich.edu 251 K91 :There are 0 users and 135 invisible on 2 servers
+:yakko.cs.wmich.edu 252 K91 13 :IRC Operators online
+:yakko.cs.wmich.edu 253 K91 2 :unknown connection(s)
+:yakko.cs.wmich.edu 254 K91 101 :channels formed
+:yakko.cs.wmich.edu 255 K91 :I have 127 clients and 1 servers
+:yakko.cs.wmich.edu 265 K91 :Current local users: 127  Max: 129
+:yakko.cs.wmich.edu 266 K91 :Current global users: 135  Max: 137
+:yakko.cs.wmich.edu 250 K91 :Highest connection count: 130 (129 clients) (1007 connections received)
+:yakko.cs.wmich.edu 375 K91 :- yakko.cs.wmich.edu Message of the Day - 
+:yakko.cs.wmich.edu 372 K91 :-  /$$     /$$ /$$$$$$  /$$   /$$ /$$   /$$  /$$$$$$ 
+:yakko.cs.wmich.edu 372 K91 :- |  $$   /$$//$$__  $$| $$  /$$/| $$  /$$/ /$$__  $$
+:yakko.cs.wmich.edu 372 K91 :-  \  $$ /$$/| $$  \ $$| $$ /$$/ | $$ /$$/ | $$  \ $$
+:yakko.cs.wmich.
+12/17/2015 18:40:44	edu 372 K91 :-   \  $$$$/ | $$$$$$$$| $$$$$/  | $$$$$/  | $$  | $$
+:yakko.cs.wmich.edu 372 K91 :-    \  $$/  | $$__  $$| $$  $$  | $$  $$  | $$  | $$
+:yakko.cs.wmich.edu 372 K91 :-     | $$   | $$  | $$| $$\  $$ | $$\  $$ | $$  | $$
+:yakko.cs.wmich.edu 372 K91 :-     | $$   | $$  | $$| $$ \  $$| $$ \  $$|  $$$$$$/
+:yakko.cs.wmich.edu 372 K91 :-     |__/   |__/  |__/|__/  \__/|__/  \__/ \______/ 
+:yakko.cs.wmich.edu 372 K91 :- Welcome to the yakko ircd-hybrid server!
+:yakko.cs.wmich.edu 372 K91 :- 
+:yakko.cs.wmich.edu 372 K91 :- New to IRC? Check the man page:
+:yakko.cs.wmich.edu 372 K91 :- https://docs.google.com/document/d/1h3adRbyve4ymWh8Yf7MtdAl3KQZgiChxHoOQKZlYJhM/
+:yakko.cs.wmich.edu 372 K91 :- it 
+:yakko.cs.wmich.edu 376 K91 :End of /MOTD command.
+:K91!K91@yakko.cs.wmich.edu MODE K91 :+i
+:K91!K91@yakko.cs.wmich.edu JOIN :#theTARDIS
+:yakko.cs.wmich.edu 353 K91 = #theTARDIS :K91 Hardison zurek mobyte
+:yakko.cs.wmich.edu 366 K91 #theTARDIS :End of /NAMES list.
+:K91!K91@yakko.cs.wmich.edu JOI
+12/17/2015 18:40:44	N :#test
+:yakko.cs.wmich.edu 353 K91 = #test :K91 caboose Hardison fish stringy gobot kessler twitch strongth @^[^_^]^
+:yakko.cs.wmich.edu 366 K91 #test :End of /NAMES list.
+:K91!K91@yakko.cs.wmich.edu JOIN :#asdf
+:yakko.cs.wmich.edu 353 K91 = #asdf :K91 @Hardison
+:yakko.cs.wmich.edu 366 K91 #asdf :End of /NAMES list.
+:Global!Global@dot.cs.wmich.edu NOTICE K91 :If you're seeing this, Hybserv for Debian is working and installed.
+
+12/17/2015 18:40:49	:Hardison!hardison@yakko.cs.wmich.edu PRIVMSG K91 :hello
+
+12/17/2015 18:40:52	:Hardison!hardison@yakko.cs.wmich.edu PRIVMSG K91 :shitt.
+
+12/17/2015 18:43:26	:Hardison!hardison@yakko.cs.wmich.edu PRIVMSG K91 :hello
+
+12/17/2015 18:43:31	:Hardison!hardison@yakko.cs.wmich.edu PRIVMSG K91 :#door
+
+12/17/2015 18:45:43	Connecting to the IRC Server...
+12/17/2015 18:45:43	Connected to IRC Server. Signing In...
+12/17/2015 18:45:43	Signed In. Joining Channels...
+12/17/2015 18:45:43	The Bot is Up and Running
+12/17/2015 18:45:43	Connecting to the IRC Server...
+12/17/2015 18:45:43	Connected to IRC Server. Signing In...
+12/17/2015 18:45:43	Signed In. Joining Channels...
+12/17/2015 18:45:43	The Bot is Up and Running
+12/17/2015 18:45:43	:yakko.cs.wmich.edu NOTICE AUTH :*** Looking up your hostname...
+:yakko.cs.wmich.edu NOTICE AUTH :*** Checking Ident
+:yakko.cs.wmich.edu NOTICE AUTH :*** No Ident response
+:yakko.cs.wmich.edu NOTICE AUTH :*** Found your hostname
+:yakko.cs.wmich.edu NOTICE K91 :*** Spoofing your IP. Congrats.
+:yakko.cs.wmich.edu 001 K91 :Welcome to the debian Internet Relay Chat Network K91
+:yakko.cs.wmich.edu 002 K91 :Your host is yakko.cs.wmich.edu[127.0.0.1/6667], running version hybrid-1:8.1.13.dfsg.1-1
+:yakko.cs.wmich.edu 003 K91 :This server was created Jan  9 2014 at 05:35:43
+:yakko.cs.wmich.edu 004 K91 yakko.cs.wmich.edu hybrid-1:8.1.13.dfsg.1-1 DFGHRSWabcdefgijklnorsuwxyz bciklmnoprstveIMORS bkloveIh
+:yakko.cs.wmich.edu 005 K91 CALLERID CASEMAPPING=rfc1459 DEAF=D KICKLEN=180 MODES=4 PREFIX=(ohv)@%+ STATUSMSG=@%+ EXCEPTS=e INVEX=I NICKLEN=15 NETWORK=debian MAXLIST=beI:160 MAXTARGETS=1 :are supported by this server
+:yakko.cs.wmich.edu 005 K91 CHANTYPES=# CHANLIMIT=#:100 CHANNELLEN=50 TOPICLEN=300 CHANMODES=beI
+12/17/2015 18:45:43	,k,l,imnprstORS ELIST=CMNTU SAFELIST KNOCK WATCH=60 AWAYLEN=180 :are supported by this server
+:yakko.cs.wmich.edu 042 K91 0HYAAAA19 :your unique ID
+:yakko.cs.wmich.edu 251 K91 :There are 0 users and 135 invisible on 2 servers
+:yakko.cs.wmich.edu 252 K91 13 :IRC Operators online
+:yakko.cs.wmich.edu 253 K91 3 :unknown connection(s)
+:yakko.cs.wmich.edu 254 K91 101 :channels formed
+:yakko.cs.wmich.edu 255 K91 :I have 127 clients and 1 servers
+:yakko.cs.wmich.edu 265 K91 :Current local users: 127  Max: 129
+:yakko.cs.wmich.edu 266 K91 :Current global users: 135  Max: 137
+:yakko.cs.wmich.edu 250 K91 :Highest connection count: 130 (129 clients) (1008 connections received)
+:yakko.cs.wmich.edu 375 K91 :- yakko.cs.wmich.edu Message of the Day - 
+:yakko.cs.wmich.edu 372 K91 :-  /$$     /$$ /$$$$$$  /$$   /$$ /$$   /$$  /$$$$$$ 
+:yakko.cs.wmich.edu 372 K91 :- |  $$   /$$//$$__  $$| $$  /$$/| $$  /$$/ /$$__  $$
+:yakko.cs.wmich.edu 372 K91 :-  \  $$ /$$/| $$  \ $$| $$ /$$/ | $$ /$$/ | $$  \ $$
+:yakko.cs.wmich.
+12/17/2015 18:45:43	edu 372 K91 :-   \  $$$$/ | $$$$$$$$| $$$$$/  | $$$$$/  | $$  | $$
+:yakko.cs.wmich.edu 372 K91 :-    \  $$/  | $$__  $$| $$  $$  | $$  $$  | $$  | $$
+:yakko.cs.wmich.edu 372 K91 :-     | $$   | $$  | $$| $$\  $$ | $$\  $$ | $$  | $$
+:yakko.cs.wmich.edu 372 K91 :-     | $$   | $$  | $$| $$ \  $$| $$ \  $$|  $$$$$$/
+:yakko.cs.wmich.edu 372 K91 :-     |__/   |__/  |__/|__/  \__/|__/  \__/ \______/ 
+:yakko.cs.wmich.edu 372 K91 :- Welcome to the yakko ircd-hybrid server!
+:yakko.cs.wmich.edu 372 K91 :- 
+:yakko.cs.wmich.edu 372 K91 :- New to IRC? Check the man page:
+:yakko.cs.wmich.edu 372 K91 :- https://docs.google.com/document/d/1h3adRbyve4ymWh8Yf7MtdAl3KQZgiChxHoOQKZlYJhM/
+:yakko.cs.wmich.edu 372 K91 :- it 
+:yakko.cs.wmich.edu 376 K91 :End of /MOTD command.
+:K91!K91@yakko.cs.wmich.edu MODE K91 :+i
+:K91!K91@yakko.cs.wmich.edu JOIN :#theTARDIS
+:yakko.cs.wmich.edu 353 K91 = #theTARDIS :K91 Hardison zurek mobyte
+:yakko.cs.wmich.edu 366 K91 #theTARDIS :End of /NAMES list.
+:K91!K91@yakko.cs.wmich.edu JOI
+12/17/2015 18:45:43	N :#test
+:yakko.cs.wmich.edu 353 K91 = #test :K91 caboose Hardison fish stringy gobot kessler twitch strongth @^[^_^]^
+:yakko.cs.wmich.edu 366 K91 #test :End of /NAMES list.
+:K91!K91@yakko.cs.wmich.edu JOIN :#asdf
+:yakko.cs.wmich.edu 353 K91 = #asdf :K91 @Hardison
+:yakko.cs.wmich.edu 366 K91 #asdf :End of /NAMES list.
+:Global!Global@dot.cs.wmich.edu NOTICE K91 :If you're seeing this, Hybserv for Debian is working and installed.
+
+12/17/2015 18:45:59	Connecting to the IRC Server...
+12/17/2015 18:45:59	Connected to IRC Server. Signing In...
+12/17/2015 18:45:59	Signed In. Joining Channels...
+12/17/2015 18:45:59	The Bot is Up and Running
+12/17/2015 18:45:59	Connecting to the IRC Server...
+12/17/2015 18:45:59	Connected to IRC Server. Signing In...
+12/17/2015 18:45:59	Signed In. Joining Channels...
+12/17/2015 18:45:59	The Bot is Up and Running
+12/17/2015 18:45:59	:yakko.cs.wmich.edu NOTICE AUTH :*** Looking up your hostname...
+:yakko.cs.wmich.edu NOTICE AUTH :*** Checking Ident
+:yakko.cs.wmich.edu NOTICE AUTH :*** No Ident response
+:yakko.cs.wmich.edu NOTICE AUTH :*** Found your hostname
+:yakko.cs.wmich.edu NOTICE K91 :*** Spoofing your IP. Congrats.
+:yakko.cs.wmich.edu 001 K91 :Welcome to the debian Internet Relay Chat Network K91
+:yakko.cs.wmich.edu 002 K91 :Your host is yakko.cs.wmich.edu[127.0.0.1/6667], running version hybrid-1:8.1.13.dfsg.1-1
+:yakko.cs.wmich.edu 003 K91 :This server was created Jan  9 2014 at 05:35:43
+:yakko.cs.wmich.edu 004 K91 yakko.cs.wmich.edu hybrid-1:8.1.13.dfsg.1-1 DFGHRSWabcdefgijklnorsuwxyz bciklmnoprstveIMORS bkloveIh
+:yakko.cs.wmich.edu 005 K91 CALLERID CASEMAPPING=rfc1459 DEAF=D KICKLEN=180 MODES=4 PREFIX=(ohv)@%+ STATUSMSG=@%+ EXCEPTS=e INVEX=I NICKLEN=15 NETWORK=debian MAXLIST=beI:160 MAXTARGETS=1 :are supported by this server
+:yakko.cs.wmich.edu 005 K91 CHANTYPES=# CHANLIMIT=#:100 CHANNELLEN=50 TOPICLEN=300 CHANMODES=beI
+12/17/2015 18:45:59	,k,l,imnprstORS ELIST=CMNTU SAFELIST KNOCK WATCH=60 AWAYLEN=180 :are supported by this server
+:yakko.cs.wmich.edu 042 K91 0HYAAAA2A :your unique ID
+:yakko.cs.wmich.edu 251 K91 :There are 0 users and 135 invisible on 2 servers
+:yakko.cs.wmich.edu 252 K91 13 :IRC Operators online
+:yakko.cs.wmich.edu 253 K91 2 :unknown connection(s)
+:yakko.cs.wmich.edu 254 K91 101 :channels formed
+:yakko.cs.wmich.edu 255 K91 :I have 127 clients and 1 servers
+:yakko.cs.wmich.edu 265 K91 :Current local users: 127  Max: 129
+:yakko.cs.wmich.edu 266 K91 :Current global users: 135  Max: 137
+:yakko.cs.wmich.edu 250 K91 :Highest connection count: 130 (129 clients) (1009 connections received)
+:yakko.cs.wmich.edu 375 K91 :- yakko.cs.wmich.edu Message of the Day - 
+:yakko.cs.wmich.edu 372 K91 :-  /$$     /$$ /$$$$$$  /$$   /$$ /$$   /$$  /$$$$$$ 
+:yakko.cs.wmich.edu 372 K91 :- |  $$   /$$//$$__  $$| $$  /$$/| $$  /$$/ /$$__  $$
+:yakko.cs.wmich.edu 372 K91 :-  \  $$ /$$/| $$  \ $$| $$ /$$/ | $$ /$$/ | $$  \ $$
+:yakko.cs.wmich.
+12/17/2015 18:45:59	edu 372 K91 :-   \  $$$$/ | $$$$$$$$| $$$$$/  | $$$$$/  | $$  | $$
+:yakko.cs.wmich.edu 372 K91 :-    \  $$/  | $$__  $$| $$  $$  | $$  $$  | $$  | $$
+:yakko.cs.wmich.edu 372 K91 :-     | $$   | $$  | $$| $$\  $$ | $$\  $$ | $$  | $$
+:yakko.cs.wmich.edu 372 K91 :-     | $$   | $$  | $$| $$ \  $$| $$ \  $$|  $$$$$$/
+:yakko.cs.wmich.edu 372 K91 :-     |__/   |__/  |__/|__/  \__/|__/  \__/ \______/ 
+:yakko.cs.wmich.edu 372 K91 :- Welcome to the yakko ircd-hybrid server!
+:yakko.cs.wmich.edu 372 K91 :- 
+:yakko.cs.wmich.edu 372 K91 :- New to IRC? Check the man page:
+:yakko.cs.wmich.edu 372 K91 :- https://docs.google.com/document/d/1h3adRbyve4ymWh8Yf7MtdAl3KQZgiChxHoOQKZlYJhM/
+:yakko.cs.wmich.edu 372 K91 :- it 
+:yakko.cs.wmich.edu 376 K91 :End of /MOTD command.
+:K91!K91@yakko.cs.wmich.edu MODE K91 :+i
+:K91!K91@yakko.cs.wmich.edu JOIN :#theTARDIS
+:yakko.cs.wmich.edu 353 K91 = #theTARDIS :K91 Hardison zurek mobyte
+:yakko.cs.wmich.edu 366 K91 #theTARDIS :End of /NAMES list.
+:K91!K91@yakko.cs.wmich.edu JOI
+12/17/2015 18:45:59	N :#test
+:yakko.cs.wmich.edu 353 K91 = #test :K91 caboose Hardison fish stringy gobot kessler twitch strongth @^[^_^]^
+:yakko.cs.wmich.edu 366 K91 #test :End of /NAMES list.
+:K91!K91@yakko.cs.wmich.edu JOIN :#asdf
+:yakko.cs.wmich.edu 353 K91 = #asdf :K91 @Hardison
+:yakko.cs.wmich.edu 366 K91 #asdf :End of /NAMES list.
+:Global!Global@dot.cs.wmich.edu NOTICE K91 :If you're seeing this, Hybserv for Debian is working and installed.
+
+12/17/2015 18:46:02	:Hardison!hardison@yakko.cs.wmich.edu PRIVMSG K91 :hello
+
+12/17/2015 18:46:06	:Hardison!hardison@yakko.cs.wmich.edu PRIVMSG K91 :FUCK!
+
+12/17/2015 18:47:02	Connecting to the IRC Server...
+12/17/2015 18:47:02	Connected to IRC Server. Signing In...
+12/17/2015 18:47:02	Signed In. Joining Channels...
+12/17/2015 18:47:02	The Bot is Up and Running
+12/17/2015 18:47:02	Connecting to the IRC Server...
+12/17/2015 18:47:02	Connected to IRC Server. Signing In...
+12/17/2015 18:47:02	Signed In. Joining Channels...
+12/17/2015 18:47:02	The Bot is Up and Running
+12/17/2015 18:47:02	:yakko.cs.wmich.edu NOTICE AUTH :*** Looking up your hostname...
+:yakko.cs.wmich.edu NOTICE AUTH :*** Checking Ident
+:yakko.cs.wmich.edu NOTICE AUTH :*** No Ident response
+:yakko.cs.wmich.edu NOTICE AUTH :*** Found your hostname
+:yakko.cs.wmich.edu NOTICE K91 :*** Spoofing your IP. Congrats.
+:yakko.cs.wmich.edu 001 K91 :Welcome to the debian Internet Relay Chat Network K91
+:yakko.cs.wmich.edu 002 K91 :Your host is yakko.cs.wmich.edu[127.0.0.1/6667], running version hybrid-1:8.1.13.dfsg.1-1
+:yakko.cs.wmich.edu 003 K91 :This server was created Jan  9 2014 at 05:35:43
+:yakko.cs.wmich.edu 004 K91 yakko.cs.wmich.edu hybrid-1:8.1.13.dfsg.1-1 DFGHRSWabcdefgijklnorsuwxyz bciklmnoprstveIMORS bkloveIh
+:yakko.cs.wmich.edu 005 K91 CALLERID CASEMAPPING=rfc1459 DEAF=D KICKLEN=180 MODES=4 PREFIX=(ohv)@%+ STATUSMSG=@%+ EXCEPTS=e INVEX=I NICKLEN=15 NETWORK=debian MAXLIST=beI:160 MAXTARGETS=1 :are supported by this server
+:yakko.cs.wmich.edu 005 K91 CHANTYPES=# CHANLIMIT=#:100 CHANNELLEN=50 TOPICLEN=300 CHANMODES=beI
+12/17/2015 18:47:02	,k,l,imnprstORS ELIST=CMNTU SAFELIST KNOCK WATCH=60 AWAYLEN=180 :are supported by this server
+:yakko.cs.wmich.edu 042 K91 0HYAAAA2B :your unique ID
+:yakko.cs.wmich.edu 251 K91 :There are 0 users and 135 invisible on 2 servers
+:yakko.cs.wmich.edu 252 K91 13 :IRC Operators online
+:yakko.cs.wmich.edu 253 K91 2 :unknown connection(s)
+:yakko.cs.wmich.edu 254 K91 101 :channels formed
+:yakko.cs.wmich.edu 255 K91 :I have 127 clients and 1 servers
+:yakko.cs.wmich.edu 265 K91 :Current local users: 127  Max: 129
+:yakko.cs.wmich.edu 266 K91 :Current global users: 135  Max: 137
+:yakko.cs.wmich.edu 250 K91 :Highest connection count: 130 (129 clients) (1010 connections received)
+:yakko.cs.wmich.edu 375 K91 :- yakko.cs.wmich.edu Message of the Day - 
+:yakko.cs.wmich.edu 372 K91 :-  /$$     /$$ /$$$$$$  /$$   /$$ /$$   /$$  /$$$$$$ 
+:yakko.cs.wmich.edu 372 K91 :- |  $$   /$$//$$__  $$| $$  /$$/| $$  /$$/ /$$__  $$
+:yakko.cs.wmich.edu 372 K91 :-  \  $$ /$$/| $$  \ $$| $$ /$$/ | $$ /$$/ | $$  \ $$
+:yakko.cs.wmich.
+12/17/2015 18:47:02	edu 372 K91 :-   \  $$$$/ | $$$$$$$$| $$$$$/  | $$$$$/  | $$  | $$
+:yakko.cs.wmich.edu 372 K91 :-    \  $$/  | $$__  $$| $$  $$  | $$  $$  | $$  | $$
+:yakko.cs.wmich.edu 372 K91 :-     | $$   | $$  | $$| $$\  $$ | $$\  $$ | $$  | $$
+:yakko.cs.wmich.edu 372 K91 :-     | $$   | $$  | $$| $$ \  $$| $$ \  $$|  $$$$$$/
+:yakko.cs.wmich.edu 372 K91 :-     |__/   |__/  |__/|__/  \__/|__/  \__/ \______/ 
+:yakko.cs.wmich.edu 372 K91 :- Welcome to the yakko ircd-hybrid server!
+:yakko.cs.wmich.edu 372 K91 :- 
+:yakko.cs.wmich.edu 372 K91 :- New to IRC? Check the man page:
+:yakko.cs.wmich.edu 372 K91 :- https://docs.google.com/document/d/1h3adRbyve4ymWh8Yf7MtdAl3KQZgiChxHoOQKZlYJhM/
+:yakko.cs.wmich.edu 372 K91 :- it 
+:yakko.cs.wmich.edu 376 K91 :End of /MOTD command.
+:K91!K91@yakko.cs.wmich.edu MODE K91 :+i
+:K91!K91@yakko.cs.wmich.edu JOIN :#theTARDIS
+:yakko.cs.wmich.edu 353 K91 = #theTARDIS :K91 Hardison zurek mobyte
+:yakko.cs.wmich.edu 366 K91 #theTARDIS :End of /NAMES list.
+:K91!K91@yakko.cs.wmich.edu JOI
+12/17/2015 18:47:02	N :#test
+:yakko.cs.wmich.edu 353 K91 = #test :K91 caboose Hardison fish stringy gobot kessler twitch strongth @^[^_^]^
+:yakko.cs.wmich.edu 366 K91 #test :End of /NAMES list.
+:K91!K91@yakko.cs.wmich.edu JOIN :#asdf
+:yakko.cs.wmich.edu 353 K91 = #asdf :K91 @Hardison
+:yakko.cs.wmich.edu 366 K91 #asdf :End of /NAMES list.
+:Global!Global@dot.cs.wmich.edu NOTICE K91 :If you're seeing this, Hybserv for Debian is working and installed.
+
+12/17/2015 18:47:04	:Hardison!hardison@yakko.cs.wmich.edu PRIVMSG K91 :FUCK!
+
+12/17/2015 18:50:42	Connecting to the IRC Server...
+12/17/2015 18:50:42	Connected to IRC Server. Signing In...
+12/17/2015 18:50:42	Signed In. Joining Channels...
+12/17/2015 18:50:42	The Bot is Up and Running
+12/17/2015 18:50:42	Connecting to the IRC Server...
+12/17/2015 18:50:42	Connected to IRC Server. Signing In...
+12/17/2015 18:50:42	Signed In. Joining Channels...
+12/17/2015 18:50:42	The Bot is Up and Running
+12/17/2015 18:50:42	:yakko.cs.wmich.edu NOTICE AUTH :*** Looking up your hostname...
+:yakko.cs.wmich.edu NOTICE AUTH :*** Checking Ident
+:yakko.cs.wmich.edu NOTICE AUTH :*** No Ident response
+:yakko.cs.wmich.edu NOTICE AUTH :*** Found your hostname
+:yakko.cs.wmich.edu NOTICE K91 :*** Spoofing your IP. Congrats.
+:yakko.cs.wmich.edu 001 K91 :Welcome to the debian Internet Relay Chat Network K91
+:yakko.cs.wmich.edu 002 K91 :Your host is yakko.cs.wmich.edu[127.0.0.1/6667], running version hybrid-1:8.1.13.dfsg.1-1
+:yakko.cs.wmich.edu 003 K91 :This server was created Jan  9 2014 at 05:35:43
+:yakko.cs.wmich.edu 004 K91 yakko.cs.wmich.edu hybrid-1:8.1.13.dfsg.1-1 DFGHRSWabcdefgijklnorsuwxyz bciklmnoprstveIMORS bkloveIh
+:yakko.cs.wmich.edu 005 K91 CALLERID CASEMAPPING=rfc1459 DEAF=D KICKLEN=180 MODES=4 PREFIX=(ohv)@%+ STATUSMSG=@%+ EXCEPTS=e INVEX=I NICKLEN=15 NETWORK=debian MAXLIST=beI:160 MAXTARGETS=1 :are supported by this server
+:yakko.cs.wmich.edu 005 K91 CHANTYPES=# CHANLIMIT=#:100 CHANNELLEN=50 TOPICLEN=300 CHANMODES=beI
+12/17/2015 18:50:42	,k,l,imnprstORS ELIST=CMNTU SAFELIST KNOCK WATCH=60 AWAYLEN=180 :are supported by this server
+:yakko.cs.wmich.edu 042 K91 0HYAAAA2C :your unique ID
+:yakko.cs.wmich.edu 251 K91 :There are 0 users and 135 invisible on 2 servers
+:yakko.cs.wmich.edu 252 K91 13 :IRC Operators online
+:yakko.cs.wmich.edu 253 K91 2 :unknown connection(s)
+:yakko.cs.wmich.edu 254 K91 101 :channels formed
+:yakko.cs.wmich.edu 255 K91 :I have 127 clients and 1 servers
+:yakko.cs.wmich.edu 265 K91 :Current local users: 127  Max: 129
+:yakko.cs.wmich.edu 266 K91 :Current global users: 135  Max: 137
+:yakko.cs.wmich.edu 250 K91 :Highest connection count: 130 (129 clients) (1011 connections received)
+:yakko.cs.wmich.edu 375 K91 :- yakko.cs.wmich.edu Message of the Day - 
+:yakko.cs.wmich.edu 372 K91 :-  /$$     /$$ /$$$$$$  /$$   /$$ /$$   /$$  /$$$$$$ 
+:yakko.cs.wmich.edu 372 K91 :- |  $$   /$$//$$__  $$| $$  /$$/| $$  /$$/ /$$__  $$
+:yakko.cs.wmich.edu 372 K91 :-  \  $$ /$$/| $$  \ $$| $$ /$$/ | $$ /$$/ | $$  \ $$
+:yakko.cs.wmich.
+12/17/2015 18:50:42	edu 372 K91 :-   \  $$$$/ | $$$$$$$$| $$$$$/  | $$$$$/  | $$  | $$
+:yakko.cs.wmich.edu 372 K91 :-    \  $$/  | $$__  $$| $$  $$  | $$  $$  | $$  | $$
+:yakko.cs.wmich.edu 372 K91 :-     | $$   | $$  | $$| $$\  $$ | $$\  $$ | $$  | $$
+:yakko.cs.wmich.edu 372 K91 :-     | $$   | $$  | $$| $$ \  $$| $$ \  $$|  $$$$$$/
+:yakko.cs.wmich.edu 372 K91 :-     |__/   |__/  |__/|__/  \__/|__/  \__/ \______/ 
+:yakko.cs.wmich.edu 372 K91 :- Welcome to the yakko ircd-hybrid server!
+:yakko.cs.wmich.edu 372 K91 :- 
+:yakko.cs.wmich.edu 372 K91 :- New to IRC? Check the man page:
+:yakko.cs.wmich.edu 372 K91 :- https://docs.google.com/document/d/1h3adRbyve4ymWh8Yf7MtdAl3KQZgiChxHoOQKZlYJhM/
+:yakko.cs.wmich.edu 372 K91 :- it 
+:yakko.cs.wmich.edu 376 K91 :End of /MOTD command.
+:K91!K91@yakko.cs.wmich.edu MODE K91 :+i
+:K91!K91@yakko.cs.wmich.edu JOIN :#theTARDIS
+:yakko.cs.wmich.edu 353 K91 = #theTARDIS :K91 Hardison zurek mobyte
+:yakko.cs.wmich.edu 366 K91 #theTARDIS :End of /NAMES list.
+:K91!K91@yakko.cs.wmich.edu JOI
+12/17/2015 18:50:42	N :#test
+:yakko.cs.wmich.edu 353 K91 = #test :K91 caboose Hardison fish stringy gobot kessler twitch strongth @^[^_^]^
+:yakko.cs.wmich.edu 366 K91 #test :End of /NAMES list.
+:K91!K91@yakko.cs.wmich.edu JOIN :#asdf
+:yakko.cs.wmich.edu 353 K91 = #asdf :K91 @Hardison
+:yakko.cs.wmich.edu 366 K91 #asdf :End of /NAMES list.
+:Global!Global@dot.cs.wmich.edu NOTICE K91 :If you're seeing this, Hybserv for Debian is working and installed.
+
+12/17/2015 18:50:45	:Hardison!hardison@yakko.cs.wmich.edu PRIVMSG K91 :hello
+
+12/17/2015 18:50:53	:Hardison!hardison@yakko.cs.wmich.edu PRIVMSG K91 :how is this happenning?
+
+12/17/2015 18:52:18	Connecting to the IRC Server...
+12/17/2015 18:52:18	Connected to IRC Server. Signing In...
+12/17/2015 18:52:18	Signed In. Joining Channels...
+12/17/2015 18:52:18	The Bot is Up and Running
+12/17/2015 18:52:18	Connecting to the IRC Server...
+12/17/2015 18:52:18	Connected to IRC Server. Signing In...
+12/17/2015 18:52:18	Signed In. Joining Channels...
+12/17/2015 18:52:18	The Bot is Up and Running
+12/17/2015 18:52:18	:yakko.cs.wmich.edu NOTICE AUTH :*** Looking up your hostname...
+:yakko.cs.wmich.edu NOTICE AUTH :*** Checking Ident
+:yakko.cs.wmich.edu NOTICE AUTH :*** No Ident response
+:yakko.cs.wmich.edu NOTICE AUTH :*** Found your hostname
+:yakko.cs.wmich.edu NOTICE K91 :*** Spoofing your IP. Congrats.
+:yakko.cs.wmich.edu 001 K91 :Welcome to the debian Internet Relay Chat Network K91
+:yakko.cs.wmich.edu 002 K91 :Your host is yakko.cs.wmich.edu[127.0.0.1/6667], running version hybrid-1:8.1.13.dfsg.1-1
+:yakko.cs.wmich.edu 003 K91 :This server was created Jan  9 2014 at 05:35:43
+:yakko.cs.wmich.edu 004 K91 yakko.cs.wmich.edu hybrid-1:8.1.13.dfsg.1-1 DFGHRSWabcdefgijklnorsuwxyz bciklmnoprstveIMORS bkloveIh
+:yakko.cs.wmich.edu 005 K91 CALLERID CASEMAPPING=rfc1459 DEAF=D KICKLEN=180 MODES=4 PREFIX=(ohv)@%+ STATUSMSG=@%+ EXCEPTS=e INVEX=I NICKLEN=15 NETWORK=debian MAXLIST=beI:160 MAXTARGETS=1 :are supported by this server
+:yakko.cs.wmich.edu 005 K91 CHANTYPES=# CHANLIMIT=#:100 CHANNELLEN=50 TOPICLEN=300 CHANMODES=beI
+12/17/2015 18:52:18	,k,l,imnprstORS ELIST=CMNTU SAFELIST KNOCK WATCH=60 AWAYLEN=180 :are supported by this server
+:yakko.cs.wmich.edu 042 K91 0HYAAAA2D :your unique ID
+:yakko.cs.wmich.edu 251 K91 :There are 0 users and 135 invisible on 2 servers
+:yakko.cs.wmich.edu 252 K91 13 :IRC Operators online
+:yakko.cs.wmich.edu 253 K91 2 :unknown connection(s)
+:yakko.cs.wmich.edu 254 K91 101 :channels formed
+:yakko.cs.wmich.edu 255 K91 :I have 127 clients and 1 servers
+:yakko.cs.wmich.edu 265 K91 :Current local users: 127  Max: 129
+:yakko.cs.wmich.edu 266 K91 :Current global users: 135  Max: 137
+:yakko.cs.wmich.edu 250 K91 :Highest connection count: 130 (129 clients) (1012 connections received)
+:yakko.cs.wmich.edu 375 K91 :- yakko.cs.wmich.edu Message of the Day - 
+:yakko.cs.wmich.edu 372 K91 :-  /$$     /$$ /$$$$$$  /$$   /$$ /$$   /$$  /$$$$$$ 
+:yakko.cs.wmich.edu 372 K91 :- |  $$   /$$//$$__  $$| $$  /$$/| $$  /$$/ /$$__  $$
+:yakko.cs.wmich.edu 372 K91 :-  \  $$ /$$/| $$  \ $$| $$ /$$/ | $$ /$$/ | $$  \ $$
+:yakko.cs.wmich.
+12/17/2015 18:52:18	edu 372 K91 :-   \  $$$$/ | $$$$$$$$| $$$$$/  | $$$$$/  | $$  | $$
+:yakko.cs.wmich.edu 372 K91 :-    \  $$/  | $$__  $$| $$  $$  | $$  $$  | $$  | $$
+:yakko.cs.wmich.edu 372 K91 :-     | $$   | $$  | $$| $$\  $$ | $$\  $$ | $$  | $$
+:yakko.cs.wmich.edu 372 K91 :-     | $$   | $$  | $$| $$ \  $$| $$ \  $$|  $$$$$$/
+:yakko.cs.wmich.edu 372 K91 :-     |__/   |__/  |__/|__/  \__/|__/  \__/ \______/ 
+:yakko.cs.wmich.edu 372 K91 :- Welcome to the yakko ircd-hybrid server!
+:yakko.cs.wmich.edu 372 K91 :- 
+:yakko.cs.wmich.edu 372 K91 :- New to IRC? Check the man page:
+:yakko.cs.wmich.edu 372 K91 :- https://docs.google.com/document/d/1h3adRbyve4ymWh8Yf7MtdAl3KQZgiChxHoOQKZlYJhM/
+:yakko.cs.wmich.edu 372 K91 :- it 
+:yakko.cs.wmich.edu 376 K91 :End of /MOTD command.
+:K91!K91@yakko.cs.wmich.edu MODE K91 :+i
+:K91!K91@yakko.cs.wmich.edu JOIN :#theTARDIS
+:yakko.cs.wmich.edu 353 K91 = #theTARDIS :K91 Hardison zurek mobyte
+:yakko.cs.wmich.edu 366 K91 #theTARDIS :End of /NAMES list.
+:K91!K91@yakko.cs.wmich.edu JOI
+12/17/2015 18:52:18	N :#test
+:yakko.cs.wmich.edu 353 K91 = #test :K91 caboose Hardison fish stringy gobot kessler twitch strongth @^[^_^]^
+:yakko.cs.wmich.edu 366 K91 #test :End of /NAMES list.
+:K91!K91@yakko.cs.wmich.edu JOIN :#asdf
+:yakko.cs.wmich.edu 353 K91 = #asdf :K91 @Hardison
+:yakko.cs.wmich.edu 366 K91 #asdf :End of /NAMES list.
+:Global!Global@dot.cs.wmich.edu NOTICE K91 :If you're seeing this, Hybserv for Debian is working and installed.
+
+12/17/2015 18:52:20	:Hardison!hardison@yakko.cs.wmich.edu PRIVMSG K91 :how is this happenning?
+
+12/17/2015 18:52:23	:Hardison!hardison@yakko.cs.wmich.edu PRIVMSG K91 :there we fucking go
+
+12/17/2015 18:52:32	:Hardison!hardison@yakko.cs.wmich.edu PRIVMSG K91 :Jesus
+
+12/17/2015 18:52:36	:Hardison!hardison@yakko.cs.wmich.edu PRIVMSG K91 :door
+
+12/17/2015 18:52:38	:Hardison!hardison@yakko.cs.wmich.edu PRIVMSG K91 :#door
+
+12/17/2015 18:52:49	:Hardison!hardison@yakko.cs.wmich.edu PRIVMSG #test :#door
+
+12/17/2015 18:52:51	:Hardison!hardison@yakko.cs.wmich.edu PRIVMSG #test :door
+
+12/17/2015 18:52:53	:Hardison!hardison@yakko.cs.wmich.edu PRIVMSG #test ::)
+
+12/17/2015 18:52:57	:Hardison!hardison@yakko.cs.wmich.edu PRIVMSG #test :#office
+
+12/17/2015 18:53:00	:Hardison!hardison@yakko.cs.wmich.edu PRIVMSG #test :#online Hardison
+
+12/17/2015 18:53:07	:Hardison!hardison@yakko.cs.wmich.edu PRIVMSG #test :#afk
+
+12/17/2015 18:53:11	:Hardison!hardison@yakko.cs.wmich.edu PRIVMSG #test :#online Hardison
+
+12/17/2015 18:53:15	:Hardison!hardison@yakko.cs.wmich.edu PRIVMSG #test :#online Hardison
+
+12/17/2015 18:53:19	:Hardison!hardison@yakko.cs.wmich.edu PRIVMSG #test :hello
+
+12/17/2015 18:53:23	:Hardison!hardison@yakko.cs.wmich.edu PRIVMSG #test :#online Hardison
+
+12/17/2015 18:53:26	:Hardison!hardison@yakko.cs.wmich.edu PRIVMSG #test :not I'm not...
+
+12/17/2015 18:56:14	Connecting to the IRC Server...
+12/17/2015 18:56:14	Connected to IRC Server. Signing In...
+12/17/2015 18:56:14	Signed In. Joining Channels...
+12/17/2015 18:56:14	The Bot is Up and Running
+12/17/2015 18:56:14	Connecting to the IRC Server...
+12/17/2015 18:56:14	Connected to IRC Server. Signing In...
+12/17/2015 18:56:14	Signed In. Joining Channels...
+12/17/2015 18:56:14	The Bot is Up and Running
+12/17/2015 18:56:14	:yakko.cs.wmich.edu NOTICE AUTH :*** Looking up your hostname...
+:yakko.cs.wmich.edu NOTICE AUTH :*** Checking Ident
+:yakko.cs.wmich.edu NOTICE AUTH :*** No Ident response
+:yakko.cs.wmich.edu NOTICE AUTH :*** Found your hostname
+:yakko.cs.wmich.edu NOTICE K91 :*** Spoofing your IP. Congrats.
+:yakko.cs.wmich.edu 001 K91 :Welcome to the debian Internet Relay Chat Network K91
+:yakko.cs.wmich.edu 002 K91 :Your host is yakko.cs.wmich.edu[127.0.0.1/6667], running version hybrid-1:8.1.13.dfsg.1-1
+:yakko.cs.wmich.edu 003 K91 :This server was created Jan  9 2014 at 05:35:43
+:yakko.cs.wmich.edu 004 K91 yakko.cs.wmich.edu hybrid-1:8.1.13.dfsg.1-1 DFGHRSWabcdefgijklnorsuwxyz bciklmnoprstveIMORS bkloveIh
+:yakko.cs.wmich.edu 005 K91 CALLERID CASEMAPPING=rfc1459 DEAF=D KICKLEN=180 MODES=4 PREFIX=(ohv)@%+ STATUSMSG=@%+ EXCEPTS=e INVEX=I NICKLEN=15 NETWORK=debian MAXLIST=beI:160 MAXTARGETS=1 :are supported by this server
+:yakko.cs.wmich.edu 005 K91 CHANTYPES=# CHANLIMIT=#:100 CHANNELLEN=50 TOPICLEN=300 CHANMODES=beI
+12/17/2015 18:56:14	,k,l,imnprstORS ELIST=CMNTU SAFELIST KNOCK WATCH=60 AWAYLEN=180 :are supported by this server
+:yakko.cs.wmich.edu 042 K91 0HYAAAA2E :your unique ID
+:yakko.cs.wmich.edu 251 K91 :There are 0 users and 135 invisible on 2 servers
+:yakko.cs.wmich.edu 252 K91 13 :IRC Operators online
+:yakko.cs.wmich.edu 253 K91 2 :unknown connection(s)
+:yakko.cs.wmich.edu 254 K91 101 :channels formed
+:yakko.cs.wmich.edu 255 K91 :I have 127 clients and 1 servers
+:yakko.cs.wmich.edu 265 K91 :Current local users: 127  Max: 129
+:yakko.cs.wmich.edu 266 K91 :Current global users: 135  Max: 137
+:yakko.cs.wmich.edu 250 K91 :Highest connection count: 130 (129 clients) (1013 connections received)
+:yakko.cs.wmich.edu 375 K91 :- yakko.cs.wmich.edu Message of the Day - 
+:yakko.cs.wmich.edu 372 K91 :-  /$$     /$$ /$$$$$$  /$$   /$$ /$$   /$$  /$$$$$$ 
+:yakko.cs.wmich.edu 372 K91 :- |  $$   /$$//$$__  $$| $$  /$$/| $$  /$$/ /$$__  $$
+:yakko.cs.wmich.edu 372 K91 :-  \  $$ /$$/| $$  \ $$| $$ /$$/ | $$ /$$/ | $$  \ $$
+:yakko.cs.wmich.
+12/17/2015 18:56:14	edu 372 K91 :-   \  $$$$/ | $$$$$$$$| $$$$$/  | $$$$$/  | $$  | $$
+:yakko.cs.wmich.edu 372 K91 :-    \  $$/  | $$__  $$| $$  $$  | $$  $$  | $$  | $$
+:yakko.cs.wmich.edu 372 K91 :-     | $$   | $$  | $$| $$\  $$ | $$\  $$ | $$  | $$
+:yakko.cs.wmich.edu 372 K91 :-     | $$   | $$  | $$| $$ \  $$| $$ \  $$|  $$$$$$/
+:yakko.cs.wmich.edu 372 K91 :-     |__/   |__/  |__/|__/  \__/|__/  \__/ \______/ 
+:yakko.cs.wmich.edu 372 K91 :- Welcome to the yakko ircd-hybrid server!
+:yakko.cs.wmich.edu 372 K91 :- 
+:yakko.cs.wmich.edu 372 K91 :- New to IRC? Check the man page:
+:yakko.cs.wmich.edu 372 K91 :- https://docs.google.com/document/d/1h3adRbyve4ymWh8Yf7MtdAl3KQZgiChxHoOQKZlYJhM/
+:yakko.cs.wmich.edu 372 K91 :- it 
+:yakko.cs.wmich.edu 376 K91 :End of /MOTD command.
+:K91!K91@yakko.cs.wmich.edu MODE K91 :+i
+:K91!K91@yakko.cs.wmich.edu JOIN :#theTARDIS
+:yakko.cs.wmich.edu 353 K91 = #theTARDIS :K91 Hardison zurek mobyte
+:yakko.cs.wmich.edu 366 K91 #theTARDIS :End of /NAMES list.
+:K91!K91@yakko.cs.wmich.edu JOI
+12/17/2015 18:56:14	N :#test
+:yakko.cs.wmich.edu 353 K91 = #test :K91 caboose Hardison fish stringy gobot kessler twitch strongth @^[^_^]^
+:yakko.cs.wmich.edu 366 K91 #test :End of /NAMES list.
+:K91!K91@yakko.cs.wmich.edu JOIN :#asdf
+:yakko.cs.wmich.edu 353 K91 = #asdf :K91 @Hardison
+:yakko.cs.wmich.edu 366 K91 #asdf :End of /NAMES list.
+:Global!Global@dot.cs.wmich.edu NOTICE K91 :If you're seeing this, Hybserv for Debian is working and installed.
+
+12/17/2015 18:56:17	:Hardison!hardison@yakko.cs.wmich.edu PRIVMSG #test :#online Hardison
+
+12/17/2015 18:56:20	:Hardison!hardison@yakko.cs.wmich.edu PRIVMSG #test :#afk
+
+12/17/2015 18:56:22	:Hardison!hardison@yakko.cs.wmich.edu PRIVMSG #test :#online Hardison
+
+12/17/2015 18:56:24	:Hardison!hardison@yakko.cs.wmich.edu PRIVMSG #test :#online Hardison
+
+12/17/2015 18:56:28	:Hardison!hardison@yakko.cs.wmich.edu PRIVMSG #test :fudge me...
+
+12/17/2015 18:57:52	Connecting to the IRC Server...
+12/17/2015 18:57:52	Connected to IRC Server. Signing In...
+12/17/2015 18:57:52	Signed In. Joining Channels...
+12/17/2015 18:57:52	The Bot is Up and Running
+12/17/2015 18:57:52	Connecting to the IRC Server...
+12/17/2015 18:57:52	Connected to IRC Server. Signing In...
+12/17/2015 18:57:52	Signed In. Joining Channels...
+12/17/2015 18:57:52	The Bot is Up and Running
+12/17/2015 18:57:52	:yakko.cs.wmich.edu NOTICE AUTH :*** Looking up your hostname...
+:yakko.cs.wmich.edu NOTICE AUTH :*** Checking Ident
+:yakko.cs.wmich.edu NOTICE AUTH :*** No Ident response
+:yakko.cs.wmich.edu NOTICE AUTH :*** Found your hostname
+:yakko.cs.wmich.edu NOTICE K91 :*** Spoofing your IP. Congrats.
+:yakko.cs.wmich.edu 001 K91 :Welcome to the debian Internet Relay Chat Network K91
+:yakko.cs.wmich.edu 002 K91 :Your host is yakko.cs.wmich.edu[127.0.0.1/6667], running version hybrid-1:8.1.13.dfsg.1-1
+:yakko.cs.wmich.edu 003 K91 :This server was created Jan  9 2014 at 05:35:43
+:yakko.cs.wmich.edu 004 K91 yakko.cs.wmich.edu hybrid-1:8.1.13.dfsg.1-1 DFGHRSWabcdefgijklnorsuwxyz bciklmnoprstveIMORS bkloveIh
+:yakko.cs.wmich.edu 005 K91 CALLERID CASEMAPPING=rfc1459 DEAF=D KICKLEN=180 MODES=4 PREFIX=(ohv)@%+ STATUSMSG=@%+ EXCEPTS=e INVEX=I NICKLEN=15 NETWORK=debian MAXLIST=beI:160 MAXTARGETS=1 :are supported by this server
+:yakko.cs.wmich.edu 005 K91 CHANTYPES=# CHANLIMIT=#:100 CHANNELLEN=50 TOPICLEN=300 CHANMODES=beI
+12/17/2015 18:57:52	,k,l,imnprstORS ELIST=CMNTU SAFELIST KNOCK WATCH=60 AWAYLEN=180 :are supported by this server
+:yakko.cs.wmich.edu 042 K91 0HYAAAA2F :your unique ID
+:yakko.cs.wmich.edu 251 K91 :There are 0 users and 135 invisible on 2 servers
+:yakko.cs.wmich.edu 252 K91 13 :IRC Operators online
+:yakko.cs.wmich.edu 253 K91 2 :unknown connection(s)
+:yakko.cs.wmich.edu 254 K91 101 :channels formed
+:yakko.cs.wmich.edu 255 K91 :I have 127 clients and 1 servers
+:yakko.cs.wmich.edu 265 K91 :Current local users: 127  Max: 129
+:yakko.cs.wmich.edu 266 K91 :Current global users: 135  Max: 137
+:yakko.cs.wmich.edu 250 K91 :Highest connection count: 130 (129 clients) (1014 connections received)
+:yakko.cs.wmich.edu 375 K91 :- yakko.cs.wmich.edu Message of the Day - 
+:yakko.cs.wmich.edu 372 K91 :-  /$$     /$$ /$$$$$$  /$$   /$$ /$$   /$$  /$$$$$$ 
+:yakko.cs.wmich.edu 372 K91 :- |  $$   /$$//$$__  $$| $$  /$$/| $$  /$$/ /$$__  $$
+:yakko.cs.wmich.edu 372 K91 :-  \  $$ /$$/| $$  \ $$| $$ /$$/ | $$ /$$/ | $$  \ $$
+:yakko.cs.wmich.
+12/17/2015 18:57:52	edu 372 K91 :-   \  $$$$/ | $$$$$$$$| $$$$$/  | $$$$$/  | $$  | $$
+:yakko.cs.wmich.edu 372 K91 :-    \  $$/  | $$__  $$| $$  $$  | $$  $$  | $$  | $$
+:yakko.cs.wmich.edu 372 K91 :-     | $$   | $$  | $$| $$\  $$ | $$\  $$ | $$  | $$
+:yakko.cs.wmich.edu 372 K91 :-     | $$   | $$  | $$| $$ \  $$| $$ \  $$|  $$$$$$/
+:yakko.cs.wmich.edu 372 K91 :-     |__/   |__/  |__/|__/  \__/|__/  \__/ \______/ 
+:yakko.cs.wmich.edu 372 K91 :- Welcome to the yakko ircd-hybrid server!
+:yakko.cs.wmich.edu 372 K91 :- 
+:yakko.cs.wmich.edu 372 K91 :- New to IRC? Check the man page:
+:yakko.cs.wmich.edu 372 K91 :- https://docs.google.com/document/d/1h3adRbyve4ymWh8Yf7MtdAl3KQZgiChxHoOQKZlYJhM/
+:yakko.cs.wmich.edu 372 K91 :- it 
+:yakko.cs.wmich.edu 376 K91 :End of /MOTD command.
+:K91!K91@yakko.cs.wmich.edu MODE K91 :+i
+:K91!K91@yakko.cs.wmich.edu JOIN :#theTARDIS
+:yakko.cs.wmich.edu 353 K91 = #theTARDIS :K91 Hardison zurek mobyte
+:yakko.cs.wmich.edu 366 K91 #theTARDIS :End of /NAMES list.
+:K91!K91@yakko.cs.wmich.edu JOI
+12/17/2015 18:57:52	N :#test
+:yakko.cs.wmich.edu 353 K91 = #test :K91 caboose Hardison fish stringy gobot kessler twitch strongth @^[^_^]^
+:yakko.cs.wmich.edu 366 K91 #test :End of /NAMES list.
+:K91!K91@yakko.cs.wmich.edu JOIN :#asdf
+:yakko.cs.wmich.edu 353 K91 = #asdf :K91 @Hardison
+:yakko.cs.wmich.edu 366 K91 #asdf :End of /NAMES list.
+:Global!Global@dot.cs.wmich.edu NOTICE K91 :If you're seeing this, Hybserv for Debian is working and installed.
+
+12/17/2015 18:57:55	:Hardison!hardison@yakko.cs.wmich.edu PRIVMSG #test :#afk
+
+12/17/2015 18:57:57	:Hardison!hardison@yakko.cs.wmich.edu PRIVMSG #test :#online Hardison
+
+12/17/2015 18:58:00	:Hardison!hardison@yakko.cs.wmich.edu PRIVMSG #test :yes!
+
+12/17/2015 18:58:28	:Hardison!hardison@yakko.cs.wmich.edu PRIVMSG #test :#hello
+
+12/17/2015 18:58:33	:Hardison!hardison@yakko.cs.wmich.edu PRIVMSG #test :#help
+
+12/17/2015 18:58:35	:Hardison!hardison@yakko.cs.wmich.edu PRIVMSG #test :#office
+
+12/17/2015 18:58:39	:Hardison!hardison@yakko.cs.wmich.edu PRIVMSG #test :#online me
+
+12/17/2015 18:58:42	:Hardison!hardison@yakko.cs.wmich.edu PRIVMSG #test :#status me
+
+12/17/2015 18:58:45	:Hardison!hardison@yakko.cs.wmich.edu PRIVMSG #test :#door
+
