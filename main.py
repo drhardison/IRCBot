@@ -17,6 +17,16 @@ Config = open("config.txt", 'r+')
 NDFile = open("NickDictionary.txt", 'r+') #Username is different than Nick
 MailTo = open("MailTo.txt", 'r+')
 
+OK_CHARS = list("abcdefghijklmnopqrstuvwxyz0123456789!@#$%^&* .,-_?:\r\n")
+
+def IsSafe(string):
+	string = string.lower()
+	for x in string:
+		if OK_CHARS.count(x) == 0:
+			return False
+	return True
+
+
 def GetConfig():
 	global Config
 	exit = False
@@ -56,7 +66,8 @@ def LoadMailList(list):
 	return list
 	
 def Email(sender, message):
-	print "Sending email..."
+	log("Sending Email...")
+	print "Sending Email..."
 	fromvar = "From: " + sender
 	Popen(["./email.sh", fromvar, message])
 
@@ -99,6 +110,7 @@ s.send("USER %s %s bla :%s\r\n" % (Identity, Host, RealName))
 
 log("Signed In. Joining Channels...")
 for x in Channels:
+	log("Joining " + x + "...")
 	print "Joining " + x + "..."
 	s.send("JOIN " + x + "\r\n")
 
@@ -130,27 +142,27 @@ def ProcessAdminCommand(command, message):
 	global NickDict
 	
 	if command == "blacklist":
-		AddToBlacklist(input[1])
+		AddToBlacklist(message[0])
 		
-		retval = input[1] + " added to Blacklist."
+		retval = message[0] + " added to Blacklist."
 	elif command == "whitelist":
-		RemoveFromBlacklist(input[1])
-		retval = input[1] + " removed from Blacklist."
+		RemoveFromBlacklist(message[0])
+		retval = message[0] + " removed from Blacklist."
 	elif command == "status":
-		if Blacklisted(input[1]):
+		if Blacklisted(message[0]):
 			retval = "Status: Blacklisted"
 		else:
 			retval = "Status: Whitelisted"
 	elif command == "clear":
-		if input[1] == "blacklist":
+		if message[0] == "blacklist":
 			ClearBlacklist()
 	elif command == "reset":
-		if input[1] == "blacklist":
+		if message[0] == "blacklist":
 			ClearBlacklist()
-		elif input[1] == "nickdict":
+		elif message[0] == "nickdict":
 			NickDict = {}
 	elif command == "addnick":
-		NickDict[input[1]] = input[2]
+		NickDict[message[0]] = message[1]
 
 	else:
 		retval = ["Arf???",]
@@ -176,6 +188,7 @@ def main():
 		stop = datetime.now()
 		elapsed = stop - Start
 		if elapsed > timedelta(minutes=3):
+			log("Clearing Senderlist")
 			print "Clearing SenderList"
 			ClearSenderList()
 			if elapsed > timedelta(minutes=90):
@@ -189,7 +202,7 @@ def main():
 		if data.find("PING :" + ServerName)!=-1:
 			s.send('PONG ' + data.split()[1]+'\r\n') 
 		
-		elif data.find("PRIVMSG") != -1:
+		elif data.find("PRIVMSG") != -1 and IsSafe(data):
 			data1 = data.split(':')
                         header = data1[1].split('!')
                         nick = header[0]
@@ -227,13 +240,14 @@ def main():
                                                 Email(sender, whoto, message)
                                                 log("Message Sent to " + whoto)
                                 elif whoto == Nick.lower():
-                                        input = message.split(' ')
-                                        command = input[0]
+                                        input1 = message.split(' ')
+                                        command = input1[0]
                                         if PWhitelist.count(sender) > 0:
-                                                answer = ProcessAdminCommand(command, input)
+						input1.remove(command)
+                                                answer = ProcessAdminCommand(command, input1)
                                         elif CommandList.count(command) > 0:
-                                                input.remove(command)
-                                                answer = ProcessUserCommand(command, input, sender, nick)
+                                                input1.remove(command)
+                                                answer = ProcessUserCommand(command, input1, sender, nick)
                                         else:
                                                 answer = []
 						answer.append("Arf???")
@@ -243,7 +257,9 @@ def main():
 
                                 elif whoto == None and lmessage.find("bot roll call") !=-1:
                                         if not pm:
-                                                UpdateBlacklist(sender, "RollCall")
+                                                update = UpdateBlacklist(sender, "RollCall")
+						if update != None:
+							say(target, update)
 
                                         answer = RollCall(lmessage, sender)
                                         if answer != None:
@@ -255,7 +271,9 @@ def main():
                                                 command = parameters[0].strip('#')
                                                 parameters.remove(parameters[0])
                                                 if not pm:
-                                                        UpdateBlacklist(sender, command)
+                                                        update = UpdateBlacklist(sender, command)
+							if update != None:
+                                                        	say(target, update)
                                                 answer = ProcessUserCommand(command, parameters, sender, nick)
                                                 if answer != None:
                                                         for x in answer:

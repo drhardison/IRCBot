@@ -7,6 +7,16 @@ from blacklist import *
 from subprocess import *
 
 AFKList = []
+VoteStatus = False
+VoteOptions = []
+Results = []
+VoteNumber = 0
+Voted = []
+
+def GetFile():
+	filename = "vote" + str(VoteNumber)
+	f = open(filename, 'w+')
+	return f
 
 def Online(user):
 	global NickDict
@@ -45,7 +55,7 @@ def Door(parameters, sender):
 	DoorPort = 1357
 	DoorBot = socket.socket()
 	DoorBot.connect((DoorServer, DoorPort))
-	DoorBot.send("status\r\n")
+	DoorBot.send("door status\r\n")
 	doorState = DoorBot.recv(1024)
 	DoorBot.close()
 	if doorState.find("open") != -1:
@@ -73,9 +83,12 @@ def Help(parameter, sender):
 			"online": ": Checks to see if <users> have SSH tunnels open (doesn't work on nicks).\nType #online <user1> <user2>... to see if he/she is online.",
 			"status": ": Type #status <user1> <user2>... to see if he/she is blacklisted.",
 			"door": ": Type #door to see if the office door is open.\nType #door open to open door and #door close to close it.",
+			"doorbell": ": Type #doorbell -s to see doorbell status. Type #doorbell to ring the doorbell. Type #doorbell -r to reset it.",
+			"dbell": ": Alias for the doorbell command. Type #help doorbell for more information.",
 			"office": ": Type #office to see who's there or #office Flags MACAddress. Flags(function) = -r(Register), -d(DeRegister), and -l(list).",
+			"vote": ": Type #vote to see if there is a vote open. Type #vote <vote> to respond to vote. Flags(-s (Start a vote), -e (End a vote)."
 		}
-		response = switcher.get(parameter[0], "")
+		response = sender + switcher.get(parameter[0], "")
 		retval.append(response)
 	return retval
 		
@@ -136,16 +149,117 @@ def UpdateAFKList(name):
 		AFKList.remove(name)
 
 def Vote(parameters, sender):
+	global VoteStatus
+	global Results
+	global VoteOptions
+	global VoteNumber
+	retval = []
+	#Only allow certain people to end vote.
+	#
+	if parameters.__len__() == 0:
+		if VoteStatus:
+			retval.append("A vote is active. Your options are: " + ", ".join(VoteOptions))
+		else:
+			retval.append("There is no vote taking place at the moment.")
+	elif parameters.__len__() == 1 and VoteStatus:
+		if parameters[0] == "-e":
+			VoteStatus = False
+			ResultDict = {}
+			if Results.__len__() > 0:
+				Winner = max(set(Results), key=Results.count)
+			else:
+				Winner = "Null"			
+
+			for x in VoteOptions:
+				VoteOptions.remove(x)
+			
+			for x in Voted:
+				Voted.remove(x)
+
+			for x in Results:
+				y = ResultDict.get(x)
+				print x
+				print y
+				if y == None:
+					ResultDict[x] = 1
+				else:
+					ResultDict[x] = ResultDict[x] + 1
+			for x in Results:
+				Results.remove(x)
+					
+			f = GetFile()
+		
+			retval.append("The Winner Is: " + str(Winner))
+
+			for x in ResultDict:
+				f.write(str(x) + ": " + str(ResultDict[x]) + " votes.\n")
+			f.close()
+			VoteNumber += 1			
+
+		elif Voted.count(sender) > 0:
+			retval.append("You have already voted.")
+		else:
+			selection = parameters[0].lower()
+			if VoteOptions.count(selection) > 0:
+				Results.append(selection)
+				Voted.append(sender)
+				retval.append("Thank You. Your vote has been counted.")
+			else:
+				retval.append("That is not a valid option.")
+			
+			
+	else:
+		if parameters[0] == "-s":
+			VoteStatus = True
+			parameters.remove(parameters[0])
+			VoteOptions = map(str.lower,parameters)
+			print join(VoteOptions)
+			retval.append("The Vote has started.")
+		elif parameters.__len__() == 1:
+			retval.append("There is no vote occuring now.")
+		else:
+			retval.append("Not a valid use of the command. Type #help vote for more info.")
+					
+	return retval
+
+def DoorBell(parameters, sender):
+        retval = []
+        DoorServer = "shrek.dhcp.io"
+        DoorPort = 1357
+        DoorBot = socket.socket()
+        DoorBot.connect((DoorServer, DoorPort))
+	DoorBot.send("bell status\r\n")
+        BellState = DoorBot.recv(1024)
+	DoorBot.close()
+	DoorBot = socket.socket()
+	DoorBot.connect((DoorServer, DoorPort))
+
+        if parameters.__len__() > 0:
+		if parameters[0] == "-s":
+			retval.append(BellState)
+		elif parameters[0] == "-r":
+			DoorBot.send("reset bell\r\n")
+			retval.append(DoorBot.recv(1024))
+		else:
+			retval.append("Not a valid use of the command. Type #help doorbell for more information.")
+	else:
+		DoorBot.send("ring bell\r\n")
+               	retval.append(DoorBot.recv(1024))
 	
+	DoorBot.close()
+        return retval
 
 
-CommandList = ["help", "online", "status", "door", "office", "afk","vote"]
+
+CommandList = ["help", "online", "status", "door", "doorbell", "dbell", "office", "afk", "vote"]
 
 CommandDict = {
 	"help":Help,
 	"online":IsOnline,
 	"status":Status,
 	"door":Door,
+	"doorbell":DoorBell,
+	"dbell":DoorBell,
 	"office":Office,
 	"afk":SetAFK,
 	"vote":Vote,
