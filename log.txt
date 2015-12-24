@@ -18898,3 +18898,10 @@
 
 12/24/2015 15:53:38	:stringy!stringy@yakko.cs.wmich.edu PRIVMSG #elections :unless you are afraid someone will steal your patented voting code
 
+12/24/2015 15:53:51	PING :yakko.cs.wmich.edu
+
+12/24/2015 15:53:51	Clearing Senderlist
+12/24/2015 15:54:10	:Hardison!hardison@yakko.cs.wmich.edu PRIVMSG #elections :no.
+
+12/24/2015 15:54:25	:Hardison!hardison@yakko.cs.wmich.edu PRIVMSG #elections :I don't mind. It should already be public in my github...
+
