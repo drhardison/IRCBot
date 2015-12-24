@@ -5,5 +5,5 @@ SERVER = yakko.cs.wmich.edu
 NICK = K9
 IDENT = K9
 REALNAME = K9
-CHANNELS = #geekboy, #theTARDIS, #vote, #election
+CHANNELS = geekboy, theTARDIS, vote, election, elections
 LEADER/PREFIX = #

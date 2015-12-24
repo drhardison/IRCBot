@@ -109,10 +109,17 @@ s.send("NICK %s\r\n" % Nick)
 s.send("USER %s %s bla :%s\r\n" % (Identity, Host, RealName))
 
 log("Signed In. Joining Channels...")
+
+def join(channel):
+	channel = "#" + channel
+	print "Joining " + channel + "..."
+	s.send("JOIN " + channel + "\r\n")
+
+
 for x in Channels:
 	log("Joining " + x + "...")
 	print "Joining " + x + "..."
-	s.send("JOIN " + x + "\r\n")
+	join(x)
 
 def say(target, message):
 	s.send("PRIVMSG " + target + " :" + message + "\r\n")	
@@ -138,7 +145,7 @@ NDFile.close()
 
 from commands import *
 
-def ProcessAdminCommand(command, message):
+def ProcessAdminCommand(command, message, nick):
 	global NickDict
 	
 	if command == "blacklist":
@@ -150,20 +157,35 @@ def ProcessAdminCommand(command, message):
 		retval = message[0] + " removed from Blacklist."
 	elif command == "status":
 		if Blacklisted(message[0]):
-			retval = "Status: Blacklisted"
+			retval = ["Status: Blacklisted",]
 		else:
-			retval = "Status: Whitelisted"
+			retval = ["Status: Whitelisted",]
 	elif command == "clear":
 		if message[0] == "blacklist":
 			ClearBlacklist()
-	elif command == "reset":
+			retval = ["Blacklist Cleared",]
+	elif command == "reset" or command == "refresh":
 		if message[0] == "blacklist":
 			ClearBlacklist()
+			retval = ["Blacklist Cleared",]
 		elif message[0] == "nickdict":
 			NickDict = {}
+			retval = ["Nick Dictionary Cleared",]
+		elif message[0] == "commands":
+			from commands import *
+			retval = ["Commands List Refreshed",]
 	elif command == "addnick":
 		NickDict[message[0]] = message[1]
+		retval = ["Nick Added",]
 
+	elif command == "join":
+		print "\"" + message[0] + "\""
+		#join(message[0])
+		s.send("JOIN #" + message[0] + "\r\n") 
+		retval = ["Done.",]
+	elif CommandList.count(command) != 0:
+		func = CommandDict.get(command)
+		retval = func(message, nick)
 	else:
 		retval = ["Arf???",]
 
@@ -244,7 +266,7 @@ def main():
                                         command = input1[0]
                                         if PWhitelist.count(sender) > 0:
 						input1.remove(command)
-                                                answer = ProcessAdminCommand(command, input1)
+                                                answer = ProcessAdminCommand(command, input1, nick)
                                         elif CommandList.count(command) > 0:
                                                 input1.remove(command)
                                                 answer = ProcessUserCommand(command, input1, sender, nick)
