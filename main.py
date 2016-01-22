@@ -151,10 +151,12 @@ def ProcessAdminCommand(command, message, nick):
 	if command == "blacklist":
 		AddToBlacklist(message[0])
 		
-		retval = message[0] + " added to Blacklist."
+		ret = message[0] + " added to Blacklist."
+		retval = [ret,]	
 	elif command == "whitelist":
 		RemoveFromBlacklist(message[0])
-		retval = message[0] + " removed from Blacklist."
+		ret = message[0] + " removed from Blacklist."
+		retval = [ret,]
 	elif command == "status":
 		if Blacklisted(message[0]):
 			retval = ["Status: Blacklisted",]
@@ -185,16 +187,16 @@ def ProcessAdminCommand(command, message, nick):
 		retval = ["Done.",]
 	elif CommandList.count(command) != 0:
 		func = CommandDict.get(command)
-		retval = func(message, nick)
+		retval = func(message, nick, True)
 	else:
 		retval = ["Arf???",]
 
 	return retval
 	
-def ProcessUserCommand(command, parameters, sender, nick):
+def ProcessUserCommand(command, parameters, sender, nick, pm):
 	if CommandList.count(command)!=0:
 		func = CommandDict.get(command)
-		retval = func(parameters, nick)
+		retval = func(parameters, nick, pm)
 	else:
 		retval = None
 	return retval	
@@ -226,81 +228,88 @@ def main():
 		
 		elif data.find("PRIVMSG") != -1 and IsSafe(data):
 			data1 = data.split(':')
-                        header = data1[1].split('!')
-                        nick = header[0]
-                        header1 = header[1].split('@')
-                        sender = header1[0]
-                        header2 = header1[1].split("PRIVMSG ")
-                        target = str(header2[1]).strip(' ')
+			header = data1[1].split('!')
+			nick = header[0]
+			header1 = header[1].split('@')
+			sender = header1[0]
+			header2 = header1[1].split("PRIVMSG ")
+			target = str(header2[1]).strip(' ')
 
-                        UpdateAFKList(nick)
-                        
-                        if data1.__len__() >= 4:
-                                whoto = data1[2].lower()
-                                message = data1[3].strip(' \r\n\t')
-                                
-                        else:
-                                whoto = None
-                                message = data1[2].strip(' \r\n\t')
-                                        
-                        lmessage = message.lower().strip(' \r\n\t')
+			UpdateAFKList(nick)
+			
+			if data1.__len__() >= 4:
+				whoto = data1[2].lower()
+				message = data1[3].strip(' \r\n\t')
+					
+			else:
+				whoto = None
+				message = data1[2].strip(' \r\n\t')
+							
+			lmessage = message.lower().strip(' \r\n\t')
 
-                        if target == Nick:
-                                target = nick
-                                if message.find(Prefix) == -1:
-                                        whoto = Nick.lower()
-                                pm = True
-                        else:
-                                pm = False
-                        
-                        if not Blacklisted(sender):
-                                if MailList.count(whoto) > 0:
+			if target == Nick:
+				target = nick
+				if message.find(Prefix) == -1:
+					whoto = Nick.lower()
+				pm = True
+			else:
+				pm = False
+			
+			if not Blacklisted(sender):
+			
+				if MailList.count(whoto) > 0:
 
-                                        if not Online(whoto):
-                                                UpdateBlacklist(sender, whoto)
-                                                say(target, "He is not online at the moment. I'll pass along the message.")
-                                                Email(sender, whoto, message)
-                                                log("Message Sent to " + whoto)
-                                elif whoto == Nick.lower():
-                                        input1 = message.split(' ')
-                                        command = input1[0]
-                                        if PWhitelist.count(sender) > 0:
+					if not Online(whoto):
+						UpdateBlacklist(sender, whoto)
+						say(target, "He is not online at the moment. I'll pass along the message.")
+						Email(sender, whoto, message)
+						log("Message Sent to " + whoto)
+						
+				elif whoto == Nick.lower():
+					input1 = message.split(' ')
+					command = input1[0]
+					if PWhitelist.count(sender) > 0:
 						input1.remove(command)
-                                                answer = ProcessAdminCommand(command, input1, nick)
-                                        elif CommandList.count(command) > 0:
-                                                input1.remove(command)
-                                                answer = ProcessUserCommand(command, input1, sender, nick)
-                                        else:
-                                                answer = []
+						answer = ProcessAdminCommand(command, input1, nick)
+					elif CommandList.count(command) > 0:
+						input1.remove(command)
+						answer = ProcessUserCommand(command, input1, sender, nick, pm)
+					else:
+						answer = []
 						answer.append("Arf???")
-                                        if answer != None:
-                                                for x in answer:
-                                                        say(target, x)
+					if answer != None:
+						for x in answer:
+							say(target, x)
 
-                                elif whoto == None and lmessage.find("bot roll call") !=-1:
-                                        if not pm:
-                                                update = UpdateBlacklist(sender, "RollCall")
+				elif whoto == None and lmessage.find("bot roll call") !=-1:
+					if not pm:
+						update = UpdateBlacklist(sender, "RollCall")
 						if update != None:
 							say(target, update)
 
-                                        answer = RollCall(lmessage, sender)
-                                        if answer != None:
-                                                say(target, answer)
-                                
-                                elif whoto == None and lmessage.find(Prefix) !=-1:
-                                        if lmessage[:1] == Prefix:
-                                                parameters = message.split(' ')
-                                                command = parameters[0].strip('#')
-                                                parameters.remove(parameters[0])
-                                                if not pm:
-                                                        update = UpdateBlacklist(sender, command)
-							if update != None:
-                                                        	say(target, update)
-                                                answer = ProcessUserCommand(command, parameters, sender, nick)
-                                                if answer != None:
-                                                        for x in answer:
-                                                                say(target, x)
-
+						answer = RollCall(lmessage, sender)
+						if answer != None:
+							say(target, answer)
+					
+				elif whoto == None and lmessage.find(Prefix) !=-1:
+						print message
+						if lmessage[:1] == Prefix:
+							parameters = message.split(' ')
+							command = parameters[0].strip('#')
+							parameters.remove(parameters[0])
+							if not pm:
+								update = UpdateBlacklist(sender, command)
+								if update != None:
+									say(target, update)
+								answer = ProcessUserCommand(command, parameters, sender, nick, pm)
+								if answer != None:
+									for x in answer:
+										say(target, x)
+							else:
+								answer = ProcessUserCommand(command, parameters, sender, nick, pm)
+								if answer != None:
+									for x in answer:
+										say(target, x)
 
 			
 #============ Main Method Referral ============#

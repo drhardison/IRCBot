@@ -29,7 +29,7 @@ def Online(user):
 	else:
 		return False
 			
-def IsOnline(parameters, sender):
+def IsOnline(parameters, sender, pm):
 	retval = []
 	if len(parameters) > 0:
 		for x in parameters:
@@ -49,7 +49,7 @@ def IsOnline(parameters, sender):
 
 
 
-def Door(parameters, sender):
+def Door(parameters, sender, pm):
 	retval = []
 	DoorServer = "shrek.dhcp.io"
 	DoorPort = 1357
@@ -60,7 +60,7 @@ def Door(parameters, sender):
 	DoorBot.close()
 	if doorState.find("open") != -1:
 		parameters = []
-		response = Office(parameters, sender)
+		response = Office(parameters, sender, None)
 		temp = response[0].split(" - ")
 		list1 = temp[0]
 		retval.append(list1 + "; " + doorState)
@@ -69,7 +69,7 @@ def Door(parameters, sender):
 		
 	return retval
 
-def Help(parameter, sender):
+def Help(parameter, sender, pm):
 	retval = []
 	if len(parameter) == 0 or len(parameter) > 1:
 		retval.append("Available Commands: " + ', '.join(CommandList))
@@ -83,8 +83,9 @@ def Help(parameter, sender):
 			"online": ": Checks to see if <users> have SSH tunnels open (doesn't work on nicks).\nType #online <user1> <user2>... to see if he/she is online.",
 			"status": ": Type #status <user1> <user2>... to see if he/she is blacklisted.",
 			"door": ": Type #door to see if the office door is open.\nType #door open to open door and #door close to close it.",
-			"doorbell": ": Type #doorbell -s to see doorbell status. Type #doorbell to ring the doorbell. Type #doorbell -r to reset it.",
+			"doorbell": ": Type #doorbell -s to see doorbell status. Type #doorbell to ring the doorbell.",
 			"dbell": ": Alias for the doorbell command. Type #help doorbell for more information.",
+			"bell": " Alias for the doorbell command. Type #help doorbell for more information.",
 			"office": ": Type #office to see who's there or #office Flags MACAddress. Flags(function) = -r(Register), -d(DeRegister), and -l(list).",
 			"vote": ": Type #vote to see if there is a vote open. Type #vote <vote> to respond to vote. Flags(-s (Start a vote), -e (End a vote)."
 		}
@@ -92,7 +93,7 @@ def Help(parameter, sender):
 		retval.append(response)
 	return retval
 		
-def Status(parameters, sender):
+def Status(parameters, sender, pm):
 	retval = []
 	if len(parameters) > 0:
 		for x in parameters:
@@ -105,7 +106,7 @@ def Status(parameters, sender):
 	
 	return retval
 
-def Office(parameters, sender):
+def Office(parameters, sender, pm):
 	url = "shrek.dhcp.io:5001/"
 	retval = []
 	command = ""
@@ -139,7 +140,7 @@ def Office(parameters, sender):
 		
 	return retval
 	
-def SetAFK(parameter, sender):
+def SetAFK(parameter, sender, pm):
 	retval = []
 	AFKList.append(sender)
         retval.append("Setting " + sender + " as AFK")
@@ -148,7 +149,7 @@ def UpdateAFKList(name):
 	while AFKList.count(name) != 0:
 		AFKList.remove(name)
 
-def Vote(parameters, sender):
+def Vote(parameters, sender, pm):
 	global VoteStatus
 	global Results
 	global VoteOptions
@@ -222,36 +223,26 @@ def Vote(parameters, sender):
 					
 	return retval
 
-def DoorBell(parameters, sender):
-        retval = []
-        DoorServer = "shrek.dhcp.io"
-        DoorPort = 1357
-        DoorBot = socket.socket()
-        DoorBot.connect((DoorServer, DoorPort))
-	DoorBot.send("bell status\r\n")
-        BellState = DoorBot.recv(1024)
-	DoorBot.close()
-	DoorBot = socket.socket()
-	DoorBot.connect((DoorServer, DoorPort))
+def DoorBell(parameters, sender, pm):
+	retval = []
+	if not pm:
+		DoorServer = "shrek.dhcp.io"
+		DoorPort = 1357
+		DoorBot = socket.socket()
+		DoorBot.connect((DoorServer, DoorPort))
+		message = sender + ": ring bell\r\n"
+		DoorBot.send(message)
+		BellState = DoorBot.recv(1024)		
+		DoorBot.close()
+		retval.append(BellState)
 
-        if parameters.__len__() > 0:
-		if parameters[0] == "-s":
-			retval.append(BellState)
-		elif parameters[0] == "-r":
-			DoorBot.send("reset bell\r\n")
-			retval.append(DoorBot.recv(1024))
-		else:
-			retval.append("Not a valid use of the command. Type #help doorbell for more information.")
 	else:
-		DoorBot.send("ring bell\r\n")
-               	retval.append(DoorBot.recv(1024))
-	
-	DoorBot.close()
-        return retval
+		retval.append("This Function is not Available in PM")
+	return retval
 
 
 
-CommandList = ["help", "online", "status", "door", "doorbell", "dbell", "office", "afk", "vote"]
+CommandList = ["help", "online", "status", "door", "doorbell", "dbell", "bell", "office", "afk", "vote"]
 
 CommandDict = {
 	"help":Help,
@@ -260,6 +251,7 @@ CommandDict = {
 	"door":Door,
 	"doorbell":DoorBell,
 	"dbell":DoorBell,
+	"bell":DoorBell,
 	"office":Office,
 	"afk":SetAFK,
 	"vote":Vote,
